@@ -1,0 +1,245 @@
+body{
+    position: relative;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+#container{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+}
+/* For navigation Bar */
+.navigation-bar{
+    position: fixed;
+    display: flex;
+    background-color: rgb(30, 37, 37);
+    color: white;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    background-image: url("./images/navigationNew.jpg");
+    z-index: 999999999;
+}
+.nav-bar-first{
+    position: relative;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    color: whitesmoke;
+}
+.navbar-first-first{
+    left: 0 !important;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+.nav-logo{
+    border-radius: 50%;
+    margin-right: 40px;
+}
+.nav-bar-second{
+    position: relative;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    right: 1rem;
+}
+.nav-bar-second li{
+    justify-content:space-evenly;
+    
+}
+.nav-bar-second li a{
+    padding: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar-second li a:hover{
+    background-image: url("./images/ba.jpeg");
+    background-repeat: no-repeat;
+    opacity: 10;
+    color: whitesmoke;
+    border-radius: 20%;
+}
+
+.button-to-toggle-menu{
+    display: none;
+}
+/*----------------------------------------------*/
+
+.project{
+    position: relative;
+    top: 5rem;
+    height: 20rem;
+}
+
+.project-text{
+    margin-top: 0rem;
+    height: max-content;
+    position: relative;
+    background-image: url('./images/dallEimage.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: right;
+    display: flex;
+}
+/* Footer Sections */
+.footer{
+    bottom: 0px;
+}
+
+/* Responsive from here */
+
+@media  screen and (max-width: 715px) {
+    .navigation-bar{
+        overflow: hidden;
+        position: fixed;
+        display: flex;
+        background-color: rgb(30, 37, 37);
+        color: white;
+        top: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem;
+        background-image: url("./images/navigationNew.jpg");
+        z-index: 999999999;
+    }
+    .nav-bar-first{
+        margin-left: 0;
+        padding-left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .navbar-first-first{
+        align-items: center;
+        display: flex;
+    }
+    .nav-logo{
+        margin-right: 40px;
+        padding-left: 25px;
+    }
+    .nav-bar-second{
+        position: absolute;
+        display: block;
+        top: 4rem;
+        padding: 3rem;
+        height: 10000px;
+        right: 0;
+        background-image: url("./images/navigationNew.jpg");
+        /* transform: translateX(100%); */
+    }
+    .nav-bar-second li{
+        padding: 25px;
+    }
+    .button-to-toggle-menu{
+        display: block;
+        margin-right: 30px;
+        width: 50px;
+        padding: 0;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+    }
+    .button-to-toggle-menu:hover{
+        background-image: url("./images/nav-img.jpg");
+        background-repeat: no-repeat;
+    }
+    .button-to-toggle-menu .menu-bar{
+        width: 100%;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+    }
+    .project-text{
+        margin-top: 0rem;
+        height: max-content;
+        position: relative;
+        background-image: url('./images/dallEimage.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        overflow: auto;
+    }
+}
+/* For home div */
+
+.home{
+    position: relative;
+    color:black;
+    background-color: whitesmoke;
+    margin-top: 5rem;
+    padding: 5px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.infos{
+    /* background-color: aqua; */
+    margin-left: 30px;
+}
+.image-for-home{
+
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+}
+
+
+.project-handler{
+    margin: 10px;
+    border: 5px solid pink;
+    width: max-content;
+    height: max-content;
+}
+
+/* For about */
+
+.about{
+    background-color: blue;
+    color: black;
+}
+
+/* For contact */
+.contact{
+    position: relative;
+    background-color: black;
+    display: flex;
+    width: 100%;
+}
+.contact-list{
+    position: relative;
+    list-style: none;
+    margin-top: 100px;
+    display: block;
+    align-items: left;
+}
+.contact-list li a{
+    text-decoration: none;
+    color: bisque;
+}
+.contact-list li a:hover{
+    text-decoration: none;
+    color: red;
+}
+/* For footer */
+
+.footer{
+    background-color: pink;
+    height: max-content;
+    width: max-content;
+}
