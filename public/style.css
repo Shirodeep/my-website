@@ -5,6 +5,12 @@ body{
     margin: 0;
     padding: 0;
     color: white;
+    background-image: url('./images/dallEimage.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: max-content;
+    overflow-x: hidden;
 }
 #container{
     position: relative;
@@ -12,7 +18,9 @@ body{
     height: max-content;
     padding: 0;
 }
+
 /* For navigation Bar */
+
 .navigation-bar{
     position: fixed;
     display: flex;
@@ -74,28 +82,128 @@ body{
 .button-to-toggle-menu{
     display: none;
 }
-/*----------------------------------------------*/
 
-.project{
+/* For home*/
+
+.home{
     position: relative;
-    top: 5rem;
-    height: 20rem;
+    color:black;
+    background-color: whitesmoke;
+    margin-top: 5rem;
+    padding: 5px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.my-words{
+    width: 75%;
+}
+
+.infos{
+    margin-left: 30px;
+}
+
+.image-for-home{
+    
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    margin-right: 70px;
+}
+
+/* For project */
+.projects-done{
+    text-align: center;
+    color: rgb(243, 50, 50);
+    padding: 10px;
+    font-size: 40px;
+}
 .project-text{
     margin-top: 0rem;
     height: max-content;
     position: relative;
-    background-image: url('./images/dallEimage.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     align-items: right;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* To make flex content repeat in nex line*/
+    gap: 40px;
+    width: 100%;
 }
+.rating{
+    align-items: center;
+    display: block;  
+}
+.project-handler{
+    margin: 10px;
+    width: max-content;
+    height: max-content;
+    display: block;
+    text-align: center;
+}
+
+.project-text p{
+    padding: 0;
+    margin: 0;
+}
+
+/* For about */
+
+.about{
+    background-color: blue;
+    color: black;
+    margin: 0;
+    padding: 10px;
+}
+
+
+/* For contact */
+
+.contact{
+    background-color: black;
+    margin: 0;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-list{
+    list-style: none;
+    display: block;
+    padding: 30px;
+
+}
+.contact-list li a{
+    text-decoration: none;
+    color: bisque;
+}
+.contact-list li a:hover{
+    text-decoration: none;
+    color: red;
+}
+
 /* Footer Sections */
+
 .footer{
     bottom: 0px;
+    background-color: rgb(72, 69, 70);
+    height: max-content;
+    width: 100%;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+.footer div{
+    margin-left: 10px;
+}
+.footer p{
+    width: max-content;
+    position: relative;
+    align-items: center;
+    margin-right: 10px;
 }
 
 /* Responsive from here */
@@ -164,82 +272,8 @@ body{
     }
     .project-text{
         margin-top: 0rem;
-        height: max-content;
         position: relative;
-        background-image: url('./images/dallEimage.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        overflow: auto;
+        grid-template-columns: 50% 50% 50%;
+        grid-template-rows:  50% 50% 50%;
     }
-}
-/* For home div */
-
-.home{
-    position: relative;
-    color:black;
-    background-color: whitesmoke;
-    margin-top: 5rem;
-    padding: 5px;
-    height: max-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.infos{
-    /* background-color: aqua; */
-    margin-left: 30px;
-}
-.image-for-home{
-
-    position: relative;
-    height: 15rem;
-    width: 15rem;
-    border-radius: 50%;
-}
-
-
-.project-handler{
-    margin: 10px;
-    border: 5px solid pink;
-    width: max-content;
-    height: max-content;
-}
-
-/* For about */
-
-.about{
-    background-color: blue;
-    color: black;
-}
-
-/* For contact */
-.contact{
-    position: relative;
-    background-color: black;
-    display: flex;
-    width: 100%;
-}
-.contact-list{
-    position: relative;
-    list-style: none;
-    margin-top: 100px;
-    display: block;
-    align-items: left;
-}
-.contact-list li a{
-    text-decoration: none;
-    color: bisque;
-}
-.contact-list li a:hover{
-    text-decoration: none;
-    color: red;
-}
-/* For footer */
-
-.footer{
-    background-color: pink;
-    height: max-content;
-    width: max-content;
 }
