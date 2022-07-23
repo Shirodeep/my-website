@@ -1,6 +1,6 @@
 body{
     position: relative;
-    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
@@ -134,21 +134,41 @@ body{
 }
 .rating{
     align-items: center;
-    display: block;  
+    display: block;
 }
 .project-handler{
     margin: 10px;
     width: max-content;
+    background-color: rgb(64, 66, 66);
+    backdrop-filter: blur(10px);  
     height: max-content;
     display: block;
     text-align: center;
+    border-radius: 20%;
 }
-
+.image-for-projects{
+    border-radius: 20% 20% 0% 0%;
+}
+.hr{
+    width: 60px;
+}
 .project-text p{
     padding: 0;
     margin: 0;
 }
+.project-github-link{
+    text-decoration: none;
+    color: white;
+    border-radius: 20%;
+}
 
+
+.project-github-link:hover{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(109, 106, 106);
+    
+}
 /* For about */
 
 .about{
@@ -164,14 +184,15 @@ body{
 .contact{
     background-color: black;
     margin: 0;
-    padding: 1px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
 }
 .contact-list{
     list-style: none;
     display: block;
-    padding: 30px;
+    padding: 20px 25px;
+    margin-top: 159px;
 
 }
 .contact-list li a{
@@ -181,6 +202,70 @@ body{
 .contact-list li a:hover{
     text-decoration: none;
     color: red;
+}
+.email-holder{
+    width: 100%;
+    align-items: center;
+}
+.email-holder h1{
+    text-align: center;
+}
+.contact-message{
+width: 100%;
+position: relative;
+}
+
+.first-box{
+    position: relative;
+    font-size: 29px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.second-box{
+    position: relative;
+    font-size: 29px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-message .label1{
+    padding: 20px;
+    font-size: 29px;
+}
+.contact-message .label2{
+    padding: 20px;
+    font-size: 29px;
+}
+
+.contact-message .inputs1{
+    padding: 20px;
+    width: 50%;
+    font-size: 37px;
+}
+
+.contact-message .inputs2{
+    width: 50%;
+    padding: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.contact-message .submit-button{
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+.contact-message .inputs{
+    padding-inline: 20px;
+    background-color: whitesmoke;
+    padding-block: 10px;
+    padding-block: 10px;
+    font-size: 29px;
+    /* background-color: aqua; */
 }
 
 /* Footer Sections */
@@ -275,5 +360,15 @@ body{
         position: relative;
         grid-template-columns: 50% 50% 50%;
         grid-template-rows:  50% 50% 50%;
+    }
+    .contact-message .inputs1{
+        padding: 20px;
+        width: 50%;
+        font-size: 23px;
+    }
+    .contact-message .inputs2{
+        padding: 20px;
+        width: 50%;
+        font-size: 22px;
     }
 }
