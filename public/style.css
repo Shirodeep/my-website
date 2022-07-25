@@ -166,19 +166,22 @@ body{
 .project-github-link:hover{
     text-decoration: none;
     color: black;
-    background-color: rgb(109, 106, 106);
     
 }
 /* For about */
 
 .about{
-    background-color: blue;
-    color: black;
+    /* background-color: rgb(72, 69, 69); */
+    color: rgb(255, 255, 255);
     margin: 0;
     padding: 10px;
 }
 
-
+.status{
+    position: absolute;
+    margin: 10px 0px 0px 20px;
+    background-color: aqua;
+}
 /* For contact */
 
 .contact{
@@ -259,6 +262,7 @@ position: relative;
     align-items: center;
     text-align: center;
 }
+
 .contact-message .inputs{
     padding-inline: 20px;
     background-color: whitesmoke;

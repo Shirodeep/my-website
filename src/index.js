@@ -1,15 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Container from "./app"
- 
-function PageElement(){
-    return(
+import MainComponent from "./partials/mainComponent"
+import Header from "./partials/header"
+import Footer from "./partials/footer"
+import React from "react"
+import ReactDOM from "react-dom"
+
+
+function Container(){
+    return (
         <div>
-            < Container />
+            < Header />
+            < MainComponent />
+            < Footer />
         </div>
     )
 }
-
 ReactDOM.render(
-    <PageElement />, document.getElementById("main")
+    <Container />, document.getElementById("main")
 )
+
+
