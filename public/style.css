@@ -87,9 +87,8 @@ body{
 
 .home{
     position: relative;
-    color:black;
-    background-color: whitesmoke;
-    margin-top: 5rem;
+    color:rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom right, rgb(85, 83, 83), rgb(11, 11, 11));    margin-top: 5rem;
     padding: 5px;
     height: max-content;
     display: flex;

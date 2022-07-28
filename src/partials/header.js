@@ -1,5 +1,11 @@
 import React from "react"
 function Header(){
+    function handleClick(){
+        console.log("ALALALa")
+    }
+    function handleMouseOver(){
+        
+    }
     return (
     <header>   
         <nav className='navigation-bar'>
@@ -8,7 +14,7 @@ function Header(){
                     <li><img className='nav-logo' src='./images/logo.jpg' width='40px' height="40px" alt='logo'/></li>
                     <li><h1>SHIRODIP DAHAL</h1></li>
                </ul>
-               <button className="button-to-toggle-menu" id="button-to-toggle-menu">
+               <button className="button-to-toggle-menu" id="button-to-toggle-menu" onClick={handleClick} onMouseOver={handleMouseOver}>
                     <li className="menu-bar"></li>
                     <li className="menu-bar"></li>
                     <li className="menu-bar"></li>
@@ -22,6 +28,9 @@ function Header(){
             </ul>
         </nav>
     </header>)
+
 }
+
+
 
 export default Header
