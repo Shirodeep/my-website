@@ -1,6 +1,7 @@
 import React from "react";
 import Project from "./projects";
 import ProjectsData from "./ProjectsData";
+import memeValue from "./_practice/memegeneratorpracticce.js";
 function MyHome(){
     return(
         <div className="home" id="home">
@@ -27,7 +28,6 @@ function Projects(){
             item = {item}
         />)
     })
-    console.log(projects)
     return (
         <div className="project-text" id="projects">
             {projects}           
@@ -50,11 +50,11 @@ function Contact(){
                 <div name="EmailForm">
                     <div className="contact-message">
                         <div className="first-box">
-                            <label className="label1" for="email">Email:</label>
+                            <label className="label1" htmlFor="email">Email:</label>
                             <input type="email"id="email" placeholder="abc@xyz.com" className="inputs1" name="email" required/>
                         </div>
                         <div className="second-box">
-                            <label  className="label2"for="message">Message:</label>
+                            <label  className="label2"htmlFor="message">Message:</label>
                             <textarea id="message" className="inputs2" placeholder="@Example: This webpage is good" rows="4" cols="29" name="message" required></textarea>
                         </div>
                         <div className="submit-button"><input type="submit" value="Submit" className="inputs"/></div>
@@ -70,19 +70,25 @@ function Contact(){
     )
 }
 function AppP() {
-    
-    const thingsArray = ["Thing 1", "Thing 2"]
-    const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
+    let [randomNumber, setRandomNumber] = React.useState(69)
+    let [value, setValue] = React.useState("")
     function addItem() {
-       const  elements = `Things ${thingsArray.length + 1}`
-       thingsArray.push(elements)
-       console.log(elements)
+        setValue(prevValue =>{
+            prevValue = memeValue.data.memes[randomNumber].url
+            return (prevValue)
+        })
+        setRandomNumber(randomNumber1 => {
+            randomNumber1 += 1
+            return (randomNumber1)
+        })
+        console.log(randomNumber)
     }
     
+    // console.log(value)
     return (
         <div>
-            <button onClick={addItem}>Add Item</button>
-            {thingsElements}
+            <button onClick={addItem}>Button ADD</button>
+            <div><img src={value} alt ="whad" height='200px' width="200px"/></div>
         </div>
     )
 }
@@ -93,7 +99,7 @@ export default function MainContainer(){
         <h1 className="projects-done">Projects completed</h1>
         < Projects />
         < About />
-        <AppP />
+        < AppP />
         < Contact />    
     </div>)
 }

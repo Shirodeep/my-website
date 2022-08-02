@@ -1,4 +1,4 @@
-let key = [
+let keys = [
     {
         img: "./images/pathfindingalgorithm.png", 
         name: "Path Finding Algorithm ",
@@ -41,4 +41,4 @@ let key = [
     }
 ]
 
-export default key
+export default keys
