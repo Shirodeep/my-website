@@ -1,14 +1,13 @@
 import React from "react";
 import Project from "./projects";
 import ProjectsData from "./ProjectsData";
-import memeValue from "./_practice/memegeneratorpracticce.js";
 function MyHome(){
     return(
         <div className="home" id="home">
            <div  className="infos">
                 <h1 className="heading">Home</h1>
                 <p className="my-words"> 
-                    I got influenced by many individuals that I watched in internet.
+                    Internet influenced me and want to explore more.
                     From that day I am interested in technical fields and want to do everything I can in these feilds.
                     I am always in front of laptop I got after high school and I found interesting devices, tools, technology.
                     Nowadays I like to do small projects to achieve my dream of being software engineer. 
@@ -69,29 +68,7 @@ function Contact(){
         </div>
     )
 }
-function AppP() {
-    let [randomNumber, setRandomNumber] = React.useState(69)
-    let [value, setValue] = React.useState("")
-    function addItem() {
-        setValue(prevValue =>{
-            prevValue = memeValue.data.memes[randomNumber].url
-            return (prevValue)
-        })
-        setRandomNumber(randomNumber1 => {
-            randomNumber1 += 1
-            return (randomNumber1)
-        })
-        console.log(randomNumber)
-    }
-    
-    // console.log(value)
-    return (
-        <div>
-            <button onClick={addItem}>Button ADD</button>
-            <div><img src={value} alt ="whad" height='200px' width="200px"/></div>
-        </div>
-    )
-}
+
 export default function MainContainer(){
     return (
     <div>
@@ -99,7 +76,6 @@ export default function MainContainer(){
         <h1 className="projects-done">Projects completed</h1>
         < Projects />
         < About />
-        < AppP />
         < Contact />    
     </div>)
 }
