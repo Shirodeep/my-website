@@ -20,7 +20,7 @@ let keys = [
         }
     },
     {
-        img:"./images/reactHtmlJsCss.webp", 
+        img:"./images/reactHtmlJsCss.png", 
         name:"Webpage using React",
         github:"https://github.com/Shirodeep/my-website.git",
         projectStatus: "Project Completed",

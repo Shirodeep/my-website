@@ -1,63 +1,90 @@
-import React from "react";
+import React, { useRef } from "react";
 import Project from "./projects";
 import ProjectsData from "./ProjectsData";
-function MyHome(){
-    return(
+import emailjs from "@emailjs/browser";
+function MyHome() {
+    return (
         <div className="home" id="home">
-           <div  className="infos">
-                <h1 className="heading">Home</h1>
-                <p className="my-words"> 
-                    Internet influenced me and want to explore more.
-                    From that day I am interested in technical fields and want to do everything I can in these feilds.
-                    I am always in front of laptop I got after high school and I found interesting devices, tools, technology.
-                    Nowadays I like to do small projects to achieve my dream of being software engineer. 
-               </p>
-                <p>Passionate in coding and adventurer.</p>
-           </div>
-            <img src="./images/logo.jpg" className="image-for-home" alt="logo-of-site"/>
-        </div>      
+            <h1 className="heading">About Myself</h1>
+            <div className="home-content">
+                <img src="./images/logo.jpg" className="image-for-home" alt="logo-of-site" />
+                <div className="infos">
+
+                    <p className="my-words">
+                        Internet influenced me and want to explore more.
+                        From that day I am interested in technical fields and want to do everything I can in these feilds.
+                        I am always in front of laptop I got after high school and I found interesting devices, tools, technology.
+                        Nowadays I like to do small projects to achieve my dream of being software engineer.
+
+                    </p>
+                    <p className="my-words2">Passionate in coding and adventurer.</p>
+
+                </div>
+            </div>
+        </div>
     )
 }
 
 
-function Projects(){
-    const projects = ProjectsData.map(item =>{
+function Projects() {
+    const projectsA = ProjectsData.map(item => {
         return (
-        < Project 
-            item = {item}
-        />)
+            < Project
+                item={item}
+                key={item.name}
+            />)
     })
     return (
         <div className="project-text" id="projects">
-            {projects}           
+            {projectsA}
         </div>
     )
-} 
+}
 
-function About(){
-    return(
+function About() {
+    return (
         <div className="about" id="about">
         </div>
     )
 }
 
-function Contact(){
-    return(
+function Contact() {
+    const Form = useRef();
+    const emailSender = (e) => {
+        
+        e.preventDefault();
+        emailjs.sendForm("service_xt6pcru", "template_o89a4ti", Form.current, "iqnBKruf4WMldh7U7")
+            .then((result) => {
+                console.log(result.text);
+                console.log("message-sent");
+                document.getElementById("name").value = " ";
+                 document.getElementById("email").value = " "; 
+                 document.getElementById("message").value= " ";
+            },
+                (error) => {
+                    console.log(error);
+                })
+    }
+    return (
         <div className="contact" id="contact">
             <div className="email-holder">
                 <h1>To contact me.</h1>
                 <div name="EmailForm">
-                    <div className="contact-message">
+                    <form className="contact-message" ref={Form} onSubmit={emailSender}>
+                        <div className="first-box" id="first-box1">
+                            <label name="name" className="label1" htmlFor="name">Name:</label>
+                            <input type="text" id="name" placeholder="name" className="inputs1" name="name" required />
+                        </div>
                         <div className="first-box">
-                            <label className="label1" htmlFor="email">Email:</label>
-                            <input type="email"id="email" placeholder="abc@xyz.com" className="inputs1" name="email" required/>
+                            <label name="email" className="label1" htmlFor="email">Email:</label>
+                            <input type="email" id="email" placeholder="abc@xyz.com" className="inputs1" name="email" required />
                         </div>
                         <div className="second-box">
-                            <label  className="label2"htmlFor="message">Message:</label>
-                            <textarea id="message" className="inputs2" placeholder="@Example: This webpage is good" rows="4" cols="29" name="message" required></textarea>
+                            <label name="message" className="label2" htmlFor="message">Message:</label>
+                            <textarea id="message" className="inputs2" placeholder="@Example: This webpage is good" rows={5} cols={10} name="message" required></textarea>
                         </div>
-                        <div className="submit-button"><input type="submit" value="Submit" className="inputs"/></div>
-                    </div>
+                        <div className="submit-button"><input type="submit" value="Submit" className="inputs" /></div>
+                    </form>
                 </div>
             </div>
             <ul className="contact-list">
@@ -69,13 +96,13 @@ function Contact(){
     )
 }
 
-export default function MainContainer(){
+export default function MainContainer() {
     return (
-    <div>
-        < MyHome />
-        <h1 className="projects-done">Projects completed</h1>
-        < Projects />
-        < About />
-        < Contact />    
-    </div>)
+        <div>
+            < MyHome />
+            <h1 className="projects-done">Projects completed</h1>
+            < Projects />
+            < About />
+            < Contact />
+        </div>)
 }

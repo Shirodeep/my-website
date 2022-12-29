@@ -8,7 +8,6 @@ function MyFunction(){
     const hours = date.getHours()
     const minute = date.getMinutes()
     const second = date.getSeconds()
-    var time = date.toUTCString()
     var result, result1
     switch(day){
         case 0:
@@ -32,6 +31,10 @@ function MyFunction(){
         case 6:
             result = "Saturday"
             break;
+        default:
+            result = " "
+            break;
+            
     }
     switch(month){
         case 0:
@@ -55,21 +58,27 @@ function MyFunction(){
         case 6:
             result1 = "July"
             break;
-        case 3:
+        case 7:
             result1 = "August"
             break;
-        case 4:
+        case 8:
             result1 = "September"
             break;
-        case 5:
+        case 9:
             result1 = "October"
             break;
-        case 6:
-            result1 = "December"
+        case 10:
+            result1 = "November"
+            break;
+        case 11:
+            result1 = "November"
+            break;
+        default:
+            result = " "
             break;
     }
     return (
-        <p><sub>{hours}:{minute} {result} {result1} {year}</sub></p>
+        <p><sub>{hours}:{minute}:{second} {result} {result1} {year}</sub></p>
     )
 }
 
@@ -77,6 +86,7 @@ function MyFunction(){
 export default function Footer(){
     return(
         <footer className="footer">
+            
             <div>&copy; Copyright All rights reserved.</div>
             < MyFunction />
         </footer>

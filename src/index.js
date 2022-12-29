@@ -1,21 +1,15 @@
-import MainComponent from "./partials/mainComponent"
-import Header from "./partials/header"
-import Footer from "./partials/footer"
-import React from "react"
-import ReactDOM from "react-dom"
-
-
+import React from "react";
+import Home from "./partials/home";
+import ReactDOM from "react-dom/client";
 function Container(){
+    
     return (
-        <div>
-            < Header />
-            < MainComponent />
-            < Footer />
-        </div>
+       <Home/>
     )
 }
-ReactDOM.render(
-    <Container />, document.getElementById("main")
+let createroot = ReactDOM.createRoot(document.getElementById("main"))
+createroot.render(
+    <Container />
 )
 
 
