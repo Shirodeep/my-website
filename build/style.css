@@ -1,0 +1,547 @@
+body{
+    position: relative;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url('./images/dallEimage.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* height: max-content; */
+    overflow-x: hidden;
+}
+#container{
+    position: relative;
+    /* width: 100%; */
+    /* height: max-content; */
+    padding: 0;
+}
+
+/* For navigation Bar
+
+.navigation-bar{
+    position: fixed;
+    display: flex;
+    background-color: rgb(30, 37, 37);
+    color: white;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    background-image: url("./images/navigationNew.jpg");
+    z-index: 999999999;
+}
+.nav-bar-first{
+    position: relative;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    color: whitesmoke;
+}
+.navbar-first-first{
+    left: 0 !important;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+.nav-logo{
+    border-radius: 50%;
+    margin-right: 40px;
+}
+.nav-bar-second{
+    position: relative;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    right: 1rem;
+}
+.nav-bar-second li{
+    justify-content:space-evenly;
+    
+}
+.nav-bar-second li a{
+    padding: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar-second li a:hover{
+    background-image: url("./images/ba.jpeg");
+    background-repeat: no-repeat;
+    opacity: 10;
+    color: whitesmoke;
+    border-radius: 20%;
+}
+
+.button-to-toggle-menu{
+    display: none;
+} */
+
+/* For home*/
+
+.home{
+    display: block;
+    position: relative;
+    color:rgb(255, 255, 255);
+    background-image: linear-gradient(black, rgb(196, 6, 6), black);
+    padding: 10px;
+    height: 100vh;
+    align-items: center;
+}
+.heading{
+    text-align: center;
+    font-size: 46px;
+    transform: scale(1, .5);
+}
+.home-content{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 70%;
+    padding: 0% 15% 0 15%;
+}
+.my-words{
+    position: relative;
+    /* font-size: 24px; */
+    height: max-content;
+    width: 100%;
+
+}
+
+.infos{
+    margin-left: 30px;
+}
+
+.image-for-home{
+
+    height: 35vh;
+    width: 35vh;
+    border-radius: 50%;
+    margin-right: 70px;
+
+}
+
+/* For project */
+.projects-done{
+    text-align: center;
+    color: rgb(243, 50, 50);
+    padding: 10px;
+    font-size: 40px;
+}
+.project-text{
+    margin-top: 0rem;
+    height: max-content;
+    position: relative;
+    align-items: right;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* To make flex content repeat in nex line*/
+    gap: 40px;
+    width: 100%;
+}
+.rating{
+    align-items: center;
+    display: block;
+}
+.project-handler{
+    margin: 10px;
+    width: max-content;
+    background-color: rgb(64, 66, 66);
+    backdrop-filter: blur(10px);  
+    height: max-content;
+    display: block;
+    text-align: center;
+    border-radius: 20%;
+}
+.image-for-projects{
+    border-radius: 20% 20% 0% 0%;
+}
+.hr{
+    width: 60px;
+}
+.project-text p{
+    padding: 0;
+    margin: 0;
+}
+.project-github-link{
+    text-decoration: none;
+    color: white;
+    border-radius: 20%;
+}
+
+
+.project-github-link:hover{
+    text-decoration: none;
+    color: black;
+    
+}
+/* For about */
+
+.about{
+    /* background-color: rgb(72, 69, 69); */
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 10px;
+}
+
+.status{
+    position: absolute;
+    margin: 10px 0px 0px 20px;
+    background-color: aqua;
+}
+/* For contact */
+
+.contact{
+    background-color: black;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-list{
+    list-style: none;
+    display: block;
+    padding: 20px 25px;
+    margin-top: 159px;
+
+}
+.contact-list li a{
+    text-decoration: none;
+    color: bisque;
+}
+.contact-list li a:hover{
+    text-decoration: none;
+    color: red;
+}
+.email-holder{
+    width: 100%;
+    align-items: center;
+}
+.email-holder h1{
+    text-align: center;
+}
+.contact-message{
+width: 100%;
+position: relative;
+}
+
+.first-box{
+    position: relative;
+    font-size: 29px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.second-box{
+    position: relative;
+    font-size: 29px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-message .label1{
+    padding: 20px;
+    font-size: 29px;
+}
+.contact-message .label2{
+    padding: 20px;
+    font-size: 29px;
+}
+
+.contact-message .inputs1{
+    padding: 20px;
+    width: 50%;
+    font-size: 37px;
+}
+
+.contact-message .inputs2{
+    width: 50%;
+    padding: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.contact-message .submit-button{
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-message .inputs{
+    padding-inline: 20px;
+    background-color: whitesmoke;
+    padding-block: 10px;
+    padding-block: 10px;
+    font-size: 29px;
+    /* background-color: aqua; */
+}
+#first-box1{
+    font-size: 10px !important;
+}
+/* Footer Sections */
+
+.footer{
+    bottom: 0px;
+    background-color: rgb(72, 69, 70);
+    height: max-content;
+    width: 100%;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+.footer div{
+    margin-left: 10px;
+}
+.footer p{
+    width: max-content;
+    position: relative;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* Responsive from here */
+
+@media  screen and (max-width: 715px) {
+    /* .navigation-bar{
+        overflow: hidden;
+        position: fixed;
+        display: flex;
+        background-color: rgb(30, 37, 37);
+        color: white;
+        top: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem;
+        background-image: url("./images/navigationNew.jpg");
+        z-index: 999999999;
+    }
+    .nav-bar-first{
+        margin-left: 0;
+        padding-left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .navbar-first-first{
+        align-items: center;
+        display: flex;
+    }
+    .nav-logo{
+        margin-right: 40px;
+        padding-left: 25px;
+    }
+    .nav-bar-second{
+        position: absolute;
+        display: block;
+        top: 4rem;
+        padding: 3rem;
+        height: 10000px;
+        right: 0;
+        background-image: url("./images/navigationNew.jpg");
+        transform: translateX(100%); 
+    }
+    .nav-bar-second li{
+        padding: 25px;
+    }
+    .button-to-toggle-menu{
+        display: block;
+        margin-right: 30px;
+        width: 50px;
+        padding: 0;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+    }
+    .button-to-toggle-menu:hover{
+        background-image: url("./images/nav-img.jpg");
+        background-repeat: no-repeat;
+    }
+    .button-to-toggle-menu .menu-bar{
+        width: 100%;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+    } */
+    .project-text{
+        margin-top: 0rem;
+        position: relative;
+        grid-template-columns: 50% 50% 50%;
+        grid-template-rows:  50% 50% 50%;
+    }
+    .contact-message .inputs1{
+        padding: 20px;
+        width: 50%;
+        font-size: 23px;
+    }
+    .contact-message .inputs2{
+        padding: 20px;
+        width: 50%;
+        font-size: 22px;
+    }
+    .home{
+        display: block;
+    }
+    .home-content{
+        width: 70%;
+        padding: 0% 15% 0 15%;
+    }
+    /* .image-for-home{
+        margin-right: 20%;
+        margin-left: 20%;
+    } */
+    .image-for-home{
+
+        height: 20vh;
+        width: 20vh;
+        border-radius: 50%;
+        margin-right: 70px;
+    
+    }
+    .my-words{
+        position: relative;
+        font-size: 13px;
+        height: max-content;
+        width: 100%;
+        color: whitesmoke;
+    }
+    #first-box1{
+        font-size: 10px !important;
+    }
+}
+@media  screen and (max-width: 474px){
+    body{
+        position: relative;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-image: url('./images/dallEimage.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        /* height: max-content; */
+        overflow-x: hidden;
+    }
+    .home-content{
+        margin-top: -40px;
+    }
+    .infos{
+        margin-top: 0;
+        margin: 0 0 0 0;
+    }
+    .image-for-home{
+        height: 13vh;
+        width: 13vh;
+        border-radius: 100%;
+        margin-right: 50px;
+    
+    }
+    .my-words{
+        position: relative;
+        font-size: 12px;
+        height: max-content;
+        width: 100%;
+        color: whitesmoke;
+    }
+    .my-words2{
+        font-size: 12px;
+    }
+    /* CONTACT */
+    .contact{
+        background-color: black;
+        margin: 0;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact-list{
+        list-style: none;
+        display: block;
+        padding: 15px 20px;
+        margin-top: 148px;
+    
+    }
+    .contact-list li a{
+        text-decoration: none;
+        color: bisque;
+    }
+    .contact-list li a:hover{
+        text-decoration: none;
+        color: red;
+    }
+    .email-holder{
+        width: 100%;
+        align-items: center;
+    }
+    .email-holder h1{
+        text-align: center;
+    }
+    .contact-message{
+    width: 100%;
+    position: relative;
+    font-size: 13px !important;
+    display: block;
+    margin-left: -10px;
+    }
+    
+    .first-box, .second-box{
+        position: relative;
+        font-size: 13px;
+        padding: 20px;
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .label1, .label2{
+        padding: 20px;
+        font-size: 13px;
+    }
+    .contact-message .inputs1{
+        padding: 15px;
+        width: 70%;
+        font-size: 20px;
+    }
+    
+    .contact-message .inputs2{
+        width: 70%;
+        padding: 20px;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    
+    .contact-message .submit-button{
+        position: relative;
+        align-items: center;
+        color: black !important;
+        text-align: center;
+        margin-left: -115px;
+    }
+    
+    .contact-message .inputs{
+        padding-inline: 20px;
+        color: black;
+        background-color: whitesmoke;
+        padding-block: 10px;
+        padding-block: 10px;
+        font-size: 29px;
+        /* background-color: aqua; */
+    }
+    #first-box1{
+        font-size: 10px !important;
+    }
+}  
+    
